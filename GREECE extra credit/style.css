@@ -1,0 +1,59 @@
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #FFFFFF;
+}
+
+html, body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+
+.container > div:nth-child(1n) {
+  background-color: #FFFFFF;	
+}
+
+.container > div:nth-child(3n) {
+      background-color: #0E5FAE;
+}
+.container > div:nth-child(2n) {
+  background-color: #a81919;	
+}
+
+.container > div:nth-child(4n) {
+      background-color: #56b3cf;
+}
+
+.container {
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(12, 25px);
+  grid-template-rows: repeat(9, 23px);
+  grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "h h h h h h h h h h h h"
+        "h h h h h h h h h h h h"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "f f f f f f f f f f f f"
+        "f f f f f f f f f f f f"
+        "c c c c c c c c c c c c"
+        "c c c c c c c c c c c c";
+}
+
+.header {
+  grid-area: h;
+}
+
+.menu {
+  grid-area: m;
+}
+.footer {
+  grid-area: f;
+}
+
+.content {
+  grid-area: c;
+}
